@@ -147,7 +147,7 @@ a {
   margin-left: auto;
 }
 
-.mail-tel .link {
+.mail-tel > .link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -164,6 +164,23 @@ a {
   color: var(--accent-color);
 }
 
+.mail-tel > .link::before {
+  display: inline-flex;
+  content: '';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.mail-tel > .link:first-child::before {
+  background-image: url(../images/envelope.svg);
+}
+.mail-tel > .link:last-child::before {
+  background-image: url(../images/smartphone.svg);
+}
+
 /*           !M A I N             */
 
 /**            HERO                 */
@@ -172,7 +189,16 @@ a {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+
+  /* background-image: linear-gradient(
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4),
+    url(../images/hero.jpg)
+  ); */
+  background-image: url(../images/hero.jpg);
   background-color: var(--accent-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .hero-title {
